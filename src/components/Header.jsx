@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
-
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,25 +19,25 @@ const Header = () => {
           <div className="hidden md:flex space-x-6">
             <Link
               to="/"
-              className="text-neutral-800 hover:text-orange-600 transform transition duration-200 hover:-translate-y-0.5"
+              className="text-neutral-800 border-b-2 border-transparent hover:border-blue-500 transform transition duration-200 hover:-translate-y-0.5"
             >
               Home
             </Link>
             <Link
               to="/product"
-              className="text-neutral-800 hover:text-orange-500 transform transition duration-200 hover:-translate-y-0.5"
+              className="text-neutral-800 border-b-2 border-transparent hover:border-blue-500 transform transition duration-200 hover:-translate-y-0.5"
             >
               Product
             </Link>
             <Link
               to="/about"
-              className="text-neutral-800 hover:text-orange-500 transform transition duration-200 hover:-translate-y-0.5"
+              className="text-neutral-800 border-b-2 border-transparent hover:border-blue-500 transform transition duration-200 hover:-translate-y-0.5"
             >
               About
             </Link>
             <Link
               to="/contact"
-              className="text-neutral-800 hover:text-orange-500 transform transition duration-200 hover:-translate-y-0.5"
+              className="text-neutral-800 border-b-2 border-transparent hover:border-blue-500 transform transition duration-200 hover:-translate-y-0.5"
             >
               Contact
             </Link>
@@ -47,7 +46,7 @@ const Header = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-orange-500 focus:outline-none"
+              className="text-gray-700 hover:border-b-blue-500 focus:outline-none"
             >
               <svg
                 className="w-6 h-6"
