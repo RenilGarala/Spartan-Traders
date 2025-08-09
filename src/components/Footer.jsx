@@ -10,7 +10,7 @@ const Footer = () => {
 
           {/* Company Info */}
           <div className="w-full sm:w-3/4 lg:w-2/3">
-            <h2 className="text-orange-500 text-xl font-semibold mb-4">Spartan Traders</h2>
+            <h2 className="text-blue-500 text-xl font-semibold mb-4">Spartan Traders</h2>
             <p className="text-sm leading-relaxed max-w-96">
               Trusted supplier of scrap steel, industrial pipes, and valve casting products across Canada. We provide high-quality, cost-effective, and reliable industrial solutions.
             </p>
@@ -21,7 +21,7 @@ const Footer = () => {
             
             {/* Quick Links */}
             <div className="w-full sm:w-1/2">
-              <h3 className="text-orange-500 text-lg font-semibold mb-4">Quick Links</h3>
+              <h3 className="text-blue-500 text-lg font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2 text-sm">
                 <li><a href="/" className="hover:text-white">Home</a></li>
                 <li><a href="/pipe-products" className="hover:text-white">Pipe Products</a></li>
@@ -33,7 +33,7 @@ const Footer = () => {
 
             {/* Contact Info */}
             <div className="w-full sm:w-1/2">
-              <h3 className="text-orange-500 text-lg font-semibold mb-4">Contact Us</h3>
+              <h3 className="text-blue-500 text-lg font-semibold mb-4">Contact Us</h3>
               <p className="text-sm">📍 123 Industrial Park, Edmonton, Canada</p>
               <p className="text-sm">📞 +1 (123) 456-7890</p>
               <p className="text-sm">✉️ info@spartantraders.ca</p>

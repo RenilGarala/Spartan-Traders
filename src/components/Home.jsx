@@ -57,7 +57,7 @@ const Home = () => {
         <div className="grid gap-8 grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto">
           <div className="bg-white rounded shadow-md overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1587202372775-98973c2c7ef6?auto=format&fit=crop&w=800&q=60"
+              src="../src/assets/Scrap_Steel.png"
               alt="Scrap Steel"
               className="w-full h-48 object-cover"
             />
@@ -80,7 +80,7 @@ const Home = () => {
 
           <div className="bg-white rounded shadow-md overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1603397825267-9a84c64f29f0?auto=format&fit=crop&w=800&q=60"
+              src="../src/assets/Pipe_Product.png"
               alt="Pipe Products"
               className="w-full h-48 object-cover"
             />
@@ -103,7 +103,7 @@ const Home = () => {
 
           <div className="bg-white rounded shadow-md overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1578679247826-c3e0e1cfb708?auto=format&fit=crop&w=800&q=60"
+              src="../src/assets/Valve.png"
               alt="Valve Casting"
               className="w-full h-48 object-cover"
             />
@@ -122,6 +122,59 @@ const Home = () => {
                 Learn More
               </button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-4 bg-white">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold">
+            Why Choose Spartan Traders?
+          </h2>
+          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+            We’re not just another industrial supplier — we’re a trusted partner
+            committed to delivering quality, reliability, and exceptional service.
+          </p>
+        </div>
+
+        <div className="grid gap-8 grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto">
+          <div className="text-center p-6 bg-gray-50 rounded shadow hover:shadow-lg transition">
+            <img
+              src="../src/assets/quality.png"
+              alt="Quality Assurance"
+              className="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 className="font-bold text-lg mb-2">Quality Assurance</h3>
+            <p className="text-sm text-gray-600">
+              Our products meet strict quality standards to ensure long-term
+              performance in industrial applications.
+            </p>
+          </div>
+
+          <div className="text-center p-6 bg-gray-50 rounded shadow hover:shadow-lg transition">
+            <img
+              src="../src/assets/trust.png"
+              alt="Reliability"
+              className="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 className="font-bold text-lg mb-2">Reliable Delivery</h3>
+            <p className="text-sm text-gray-600">
+              On-time, every time - we take deadlines seriously so your projects
+              stay on track.
+            </p>
+          </div>
+
+          <div className="text-center p-6 bg-gray-50 rounded shadow hover:shadow-lg transition">
+            <img
+              src="../src/assets/expert.png"
+              alt="Expertise"
+              className="w-16 h-16 mx-auto mb-4"
+            />
+            <h3 className="font-bold text-lg mb-2">Industry Expertise</h3>
+            <p className="text-sm text-gray-600">
+              With years of experience, we provide solutions tailored to your
+              specific industrial needs.
+            </p>
           </div>
         </div>
       </section>
