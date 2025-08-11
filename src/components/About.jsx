@@ -3,7 +3,6 @@ import React from "react";
 const About = () => {
   return (
     <div className="max-w-7xl mx-auto px-6 py-12 space-y-16">
-      {/* Heading */}
       <div className="text-center">
         <h1 className="text-3xl md:text-4xl font-bold mb-5">
           About Spartan Traders
@@ -15,7 +14,6 @@ const About = () => {
         </p>
       </div>
 
-      {/* Company Overview, Vision, Mission */}
       <div className="grid md:grid-cols-2 gap-6">
         <div className="bg-white p-6 rounded-lg shadow-sm border">
           <h3 className="flex items-center gap-2 font-semibold text-lg">
@@ -66,7 +64,6 @@ const About = () => {
         </div>
       </div>
 
-      {/* Core Values */}
       <div>
         <h2 className="text-center text-2xl font-bold mb-10">
           Our Core Values
@@ -106,7 +103,6 @@ const About = () => {
         </div>
       </div>
 
-      {/* Why Choose Us */}
       <div>
         <h2 className="text-center text-2xl font-bold mb-10">
           Why Choose Spartan Traders?
@@ -133,7 +129,6 @@ const About = () => {
         </div>
       </div>
 
-      {/* Facility Information */}
       <div className="bg-gray-50 p-8 rounded-lg border">
         <h2 className="text-center text-2xl font-bold mb-10">
           Facility Information

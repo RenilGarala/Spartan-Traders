@@ -21,7 +21,7 @@ const Home = () => {
           </p>
 
           <div className="mt-8">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white text-sm md:text-base font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2 transition duration-300">
+            <Link to="/products" className="bg-blue-600 hover:bg-blue-700 text-white text-sm md:text-base font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2 transition duration-300">
               DISCOVER OUR PRODUCTS
               <svg
                 className="w-4 h-4"
@@ -36,7 +36,7 @@ const Home = () => {
                   d="M9 5l7 7-7 7"
                 />
               </svg>
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -72,7 +72,7 @@ const Home = () => {
                 <li>Fair Market Pricing</li>
                 <li>Pickup Services</li>
               </ul>
-              <button className="mt-4 bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 transition">
+              <button onClick={() => window.location.href = '/products'} className="mt-4 bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 transition">
                 Learn More
               </button>
             </div>
@@ -95,7 +95,7 @@ const Home = () => {
                 <li>Various Grades</li>
                 <li>MTR Available</li>
               </ul>
-              <button className="mt-4 bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 transition">
+              <button onClick={() => window.location.href = '/products'} className="mt-4 bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 transition">
                 Learn More
               </button>
             </div>
@@ -118,7 +118,7 @@ const Home = () => {
                 <li>Quality Assured</li>
                 <li>Multi-Industry</li>
               </ul>
-              <button className="mt-4 bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 transition">
+              <button onClick={() => window.location.href = '/products'}  className="mt-4 bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 transition">
                 Learn More
               </button>
             </div>

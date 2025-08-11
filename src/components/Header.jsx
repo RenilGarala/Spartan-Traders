@@ -24,10 +24,10 @@ const Header = () => {
               Home
             </Link>
             <Link
-              to="/product"
+              to="/products"
               className="text-neutral-800 border-b-2 border-transparent hover:border-blue-500 transform transition duration-200 hover:-translate-y-0.5"
             >
-              Product
+              Products
             </Link>
             <Link
               to="/about"
@@ -83,10 +83,10 @@ const Header = () => {
             Home
           </Link>
           <Link
-            to="/product"
+            to="/products"
             className="block text-gray-700 hover:text-orange-500 transform transition duration-200 hover:-translate-y-0.5"
           >
-            Product
+            Products
           </Link>
           <Link
             to="/about"
