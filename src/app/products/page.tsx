@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+"use client"
+import { useState } from "react";
 
-const Product = () => {
+export default function Products() {
   const [openSection, setOpenSection] = useState("pipe");
 
-  const toggleSection = (section) => {
+  const toggleSection = (section: any) => {
     setOpenSection(openSection === section ? null : section);
   };
 
-  const Card = ({ img, title, desc, features, button }) => (
+  const Card = ({ img, title, desc, features, button }: { img: string; title: string; desc: string; features?: string[]; button?: string; }) => (
     <div className="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
       <div className="relative">
         <img src={img} alt={title} className="w-full h-56 object-cover" />
@@ -34,7 +35,7 @@ const Product = () => {
       <h1 className="text-4xl font-bold text-center mb-4">
         Industrial Products and Services
       </h1>
-      <p className="text-center text-gray-600 max-w-3xl mx-auto mb-10">
+      <p className="text-center text-gray-400 max-w-3xl mx-auto mb-10">
         Explore Spartan Traders' comprehensive offering: carbon steel pipe
         products, precision valve casting components, and professional scrap
         steel trading services across Canada.
@@ -50,7 +51,7 @@ const Product = () => {
         </button>
         {openSection === "pipe" && (
           <div className="py-6">
-            <p className="mb-6 text-gray-700">
+            <p className="mb-6 text-gray-500">
               We distribute a complete range of carbon steel pipe products for
               energy, infrastructure, and industrial applications. All items are
               supported by proper MTRs and industry certifications.
@@ -281,4 +282,3 @@ const Product = () => {
   );
 };
 
-export default Product;
