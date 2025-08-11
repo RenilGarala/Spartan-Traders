@@ -7,7 +7,7 @@ const Home = () => {
       <section
         className="relative h-[80vh] bg-cover bg-center flex items-center justify-center text-white"
         style={{
-          backgroundImage: "url('../src/assets/Hero_bg.png')",
+          backgroundImage: "url('/assets/Hero_bg.png')",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
@@ -15,13 +15,20 @@ const Home = () => {
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
             Powering Progress with Premium Industrial Materials
           </h1>
-          <p className="mt-4 text-lg md:text-2xl pb-4 text-gray-200">Industrial Steel Solution Since Day One </p>
+          <p className="mt-4 text-lg md:text-2xl pb-4 text-gray-200">
+            Industrial Steel Solution Since Day One{" "}
+          </p>
           <p className="mt-4 text-sm md:text-lg text-gray-200">
-            Leading Canadian distributor of scrap steel, carbon steel pipes, and valve casting products. Quality materials for industrial applications.
+            Leading Canadian distributor of scrap steel, carbon steel pipes, and
+            valve casting products. Quality materials for industrial
+            applications.
           </p>
 
           <div className="mt-8">
-            <Link to="/products" className="bg-blue-600 hover:bg-blue-700 text-white text-sm md:text-base font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2 transition duration-300">
+            <Link
+              to="/products"
+              className="bg-blue-600 hover:bg-blue-700 text-white text-sm md:text-base font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2 transition duration-300"
+            >
               DISCOVER OUR PRODUCTS
               <svg
                 className="w-4 h-4"
@@ -57,7 +64,7 @@ const Home = () => {
         <div className="grid gap-8 grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto">
           <div className="bg-white rounded shadow-md overflow-hidden">
             <img
-              src="../src/assets/Scrap_Steel.png"
+              src="./public/assets/Scrap_Steel.png"
               alt="Scrap Steel"
               className="w-full h-48 object-cover"
             />
@@ -72,7 +79,10 @@ const Home = () => {
                 <li>Fair Market Pricing</li>
                 <li>Pickup Services</li>
               </ul>
-              <button onClick={() => window.location.href = '/products'} className="mt-4 bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 transition">
+              <button
+                onClick={() => (window.location.href = "/products")}
+                className="mt-4 bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 transition"
+              >
                 Learn More
               </button>
             </div>
@@ -80,7 +90,7 @@ const Home = () => {
 
           <div className="bg-white rounded shadow-md overflow-hidden">
             <img
-              src="../src/assets/Pipe_Product.png"
+              src="./public/assets/Pipe_Product.png"
               alt="Pipe Products"
               className="w-full h-48 object-cover"
             />
@@ -95,7 +105,10 @@ const Home = () => {
                 <li>Various Grades</li>
                 <li>MTR Available</li>
               </ul>
-              <button onClick={() => window.location.href = '/products'} className="mt-4 bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 transition">
+              <button
+                onClick={() => (window.location.href = "/products")}
+                className="mt-4 bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 transition"
+              >
                 Learn More
               </button>
             </div>
@@ -103,7 +116,7 @@ const Home = () => {
 
           <div className="bg-white rounded shadow-md overflow-hidden">
             <img
-              src="../src/assets/Valve.png"
+              src="./public/assets/Valve.png"
               alt="Valve Casting"
               className="w-full h-48 object-cover"
             />
@@ -118,7 +131,10 @@ const Home = () => {
                 <li>Quality Assured</li>
                 <li>Multi-Industry</li>
               </ul>
-              <button onClick={() => window.location.href = '/products'}  className="mt-4 bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 transition">
+              <button
+                onClick={() => (window.location.href = "/products")}
+                className="mt-4 bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 transition"
+              >
                 Learn More
               </button>
             </div>
@@ -133,14 +149,15 @@ const Home = () => {
           </h2>
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
             We’re not just another industrial supplier — we’re a trusted partner
-            committed to delivering quality, reliability, and exceptional service.
+            committed to delivering quality, reliability, and exceptional
+            service.
           </p>
         </div>
 
         <div className="grid gap-8 grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto">
           <div className="text-center p-6 bg-gray-50 rounded shadow hover:shadow-lg transition">
             <img
-              src="../src/assets/quality.png"
+              src="./public/assets/quality.png"
               alt="Quality Assurance"
               className="w-16 h-16 mx-auto mb-4"
             />
@@ -153,7 +170,7 @@ const Home = () => {
 
           <div className="text-center p-6 bg-gray-50 rounded shadow hover:shadow-lg transition">
             <img
-              src="../src/assets/trust.png"
+              src="./public/assets/trust.png"
               alt="Reliability"
               className="w-16 h-16 mx-auto mb-4"
             />
@@ -166,7 +183,7 @@ const Home = () => {
 
           <div className="text-center p-6 bg-gray-50 rounded shadow hover:shadow-lg transition">
             <img
-              src="../src/assets/expert.png"
+              src="./public/assets/expert.png"
               alt="Expertise"
               className="w-16 h-16 mx-auto mb-4"
             />

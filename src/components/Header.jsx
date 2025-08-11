@@ -11,7 +11,7 @@ const Header = () => {
           <div className="flex-shrink-0 text-2xl font-bold text-neutral-800">
             <img
               className="h-10"
-              src="../src/assets/Header_Logo.png"
+              src="./public/assets/Header_Logo.png"
               alt="Spartan Traders"
             />
           </div>
