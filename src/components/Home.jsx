@@ -64,7 +64,7 @@ const Home = () => {
         <div className="grid gap-8 grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto">
           <div className="bg-white rounded shadow-md overflow-hidden">
             <img
-              src="./public/assets/Scrap_Steel.png"
+              src="/assets/Scrap_steel.png"
               alt="Scrap Steel"
               className="w-full h-48 object-cover"
             />
@@ -90,7 +90,7 @@ const Home = () => {
 
           <div className="bg-white rounded shadow-md overflow-hidden">
             <img
-              src="./public/assets/Pipe_Product.png"
+              src="/assets/Pipe_product.png"
               alt="Pipe Products"
               className="w-full h-48 object-cover"
             />
@@ -116,7 +116,7 @@ const Home = () => {
 
           <div className="bg-white rounded shadow-md overflow-hidden">
             <img
-              src="./public/assets/Valve.png"
+              src="/assets/Valve.png"
               alt="Valve Casting"
               className="w-full h-48 object-cover"
             />
@@ -157,7 +157,7 @@ const Home = () => {
         <div className="grid gap-8 grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto">
           <div className="text-center p-6 bg-gray-50 rounded shadow hover:shadow-lg transition">
             <img
-              src="./public/assets/quality.png"
+              src="/assets/quality.png"
               alt="Quality Assurance"
               className="w-16 h-16 mx-auto mb-4"
             />
@@ -170,7 +170,7 @@ const Home = () => {
 
           <div className="text-center p-6 bg-gray-50 rounded shadow hover:shadow-lg transition">
             <img
-              src="./public/assets/trust.png"
+              src="/assets/trust.png"
               alt="Reliability"
               className="w-16 h-16 mx-auto mb-4"
             />
@@ -183,7 +183,7 @@ const Home = () => {
 
           <div className="text-center p-6 bg-gray-50 rounded shadow hover:shadow-lg transition">
             <img
-              src="./public/assets/expert.png"
+              src="/assets/expert.png"
               alt="Expertise"
               className="w-16 h-16 mx-auto mb-4"
             />

@@ -57,7 +57,7 @@ const Product = () => {
             </p>
             <div className="grid md:grid-cols-2 gap-8">
               <Card
-                img="./public/assets/Pipe_product.png"
+                img="/assets/Pipe_product.png"
                 title="OCTG (Oil Country Tubular Goods)"
                 desc="High-quality oil country tubular goods for drilling and production operations."
                 features={[
@@ -69,7 +69,7 @@ const Product = () => {
                 button="Learn More"
               />
               <Card
-                img="./public/assets/Pipe_product.png"
+                img="/assets/Pipe_product.png"
                 title="Line Pipe"
                 desc="Carbon steel line pipe for oil and gas transmission systems."
                 features={[
@@ -81,13 +81,13 @@ const Product = () => {
                 button="Learn More"
               />
               <Card
-                img="./public/assets/Pipe_product.png"
+                img="/assets/Pipe_product.png"
                 title="Piling / Hollow Section / Surplus"
                 desc="Structural steel piling and hollow sections for construction projects."
                 button="Learn More"
               />
               <Card
-                img="./public/assets/Pipe_product.png"
+                img="/assets/Pipe_product.png"
                 title="Seamless Line Pipe"
                 desc="Premium seamless steel pipe for high-pressure applications."
                 button="Learn More"
@@ -111,22 +111,22 @@ const Product = () => {
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
-                  img: "./public/assets/products/valve.png",
+                  img: "/assets/products/valve.png",
                   title: "Gate Valves",
                   desc: "Durable gate valves designed for optimal flow control in high-pressure environments.",
                 },
                 {
-                  img: "./public/assets/products/valve.png",
+                  img: "/assets/products/valve.png",
                   title: "Globe Valves",
                   desc: "Precision-engineered globe valves for throttling and regulating fluid flow.",
                 },
                 {
-                  img: "./public/assets/products/valve.png",
+                  img: "/assets/products/valve.png",
                   title: "Check Valves",
                   desc: "Reliable check valves to prevent backflow and ensure system safety.",
                 },
                 {
-                  img: "./public/assets/products/valve.png",
+                  img: "/assets/products/valve.png",
                   title: "Ball Valves",
                   desc: "High-performance ball valves for quick shut-off and minimal leakage.",
                 },
@@ -230,7 +230,7 @@ const Product = () => {
               </div>
               <div className="md:w-1/2">
                 <Card
-                  img="./public/assets/Scrap_steel.png"
+                  img="/assets/Scrap_steel.png"
                   title="Scrap Steel Handling"
                   desc="Professional collection, processing, and trading of various scrap steel types."
                 />

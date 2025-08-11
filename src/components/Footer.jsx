@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="w-full sm:w-3/4 lg:w-2/3">
             <img
               className="h-10 mb-6"
-              src="./public/assets/spartan-logo.png"
+              src="/assets/spartan-logo.png"
               alt="Spartan Traders"
             />
             <p className="text-sm leading-relaxed max-w-96">
