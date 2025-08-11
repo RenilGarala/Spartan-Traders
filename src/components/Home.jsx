@@ -129,7 +129,7 @@ const Home = () => {
       <section className="py-16 px-4 bg-white">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold">
-            Why Choose Spartan Traders?
+            Why Choose Spartan Traders
           </h2>
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
             We’re not just another industrial supplier — we’re a trusted partner
