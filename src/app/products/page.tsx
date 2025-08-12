@@ -1,17 +1,35 @@
-"use client"
+"use client";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Products() {
   const [openSection, setOpenSection] = useState("pipe");
 
-  const toggleSection = (section: any) => {
-    setOpenSection(openSection === section ? null : section);
+  const toggleSection = (section: string) => {
+    setOpenSection(openSection === section ? "" : section);
   };
 
-  const Card = ({ img, title, desc, features, button }: { img: string; title: string; desc: string; features?: string[]; button?: string; }) => (
+  const Card = ({
+    img,
+    title,
+    desc,
+    features,
+  }: {
+    img: string;
+    title: string;
+    desc: string;
+    features?: string[];
+    button?: string;
+  }) => (
     <div className="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
       <div className="relative">
-        <img src={img} alt={title} className="w-full h-56 object-cover" />
+        <Image
+          width={400}
+          height={400}
+          src={img}
+          alt={title}
+          className="w-full h-56 object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
       </div>
       <div className="p-6">
@@ -36,7 +54,7 @@ export default function Products() {
         Industrial Products and Services
       </h1>
       <p className="text-center text-gray-400 max-w-3xl mx-auto mb-10">
-        Explore Spartan Traders' comprehensive offering: carbon steel pipe
+        Explore Spartan Traders comprehensive offering: carbon steel pipe
         products, precision valve casting components, and professional scrap
         steel trading services across Canada.
       </p>
@@ -137,7 +155,9 @@ export default function Products() {
                   className="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
                 >
                   <div className="relative">
-                    <img
+                    <Image
+                      width={200}
+                      height={200}
                       src={item.img}
                       alt={item.title}
                       className="w-full h-48 object-cover"
@@ -280,5 +300,4 @@ export default function Products() {
       </div>
     </div>
   );
-};
-
+}
