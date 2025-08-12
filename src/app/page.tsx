@@ -79,8 +79,10 @@ export default function Home() {
 
         <div className="grid gap-8 grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto">
           <div className="bg-white rounded shadow-md overflow-hidden">
-            <img
-              src="./public/assets/Scrap_Steel.png"
+            <Image
+              width={400}
+              height={400}
+              src="/assets/Scrap_Steel.png"
               alt="Scrap Steel"
               className="w-full h-48 object-cover"
             />
