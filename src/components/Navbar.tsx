@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,13 +7,13 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-md">
+    <nav className="bg-neutral-200/90 shadow-md sticky">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0 text-2xl font-bold text-neutral-800">
             <Image
-            width={200}
-            height={200}
+              width={200}
+              height={200}
               className="h-10"
               src="/assets/Header_Logo.png"
               alt="Spartan Traders"

@@ -1,7 +1,23 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import Lenis from "lenis";
+import "lenis/dist/lenis.css";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    // Initialize Lenis
+    const lenis = new Lenis();
+
+    // Use requestAnimationFrame to continuously update the scroll
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
   return (
     <div className="font-sans text-gray-800">
       <section
@@ -112,7 +128,7 @@ export default function Home() {
 
           <div className="bg-white rounded shadow-md overflow-hidden">
             <Image
-             width={400}
+              width={400}
               height={400}
               src="/assets/Valve.png"
               alt="Valve Casting"
