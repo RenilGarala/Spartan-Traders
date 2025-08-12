@@ -1,3 +1,5 @@
+
+import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 
@@ -28,9 +30,9 @@ const Footer = () => {
               </h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="/" className="hover:text-white">
+                  <Link href="/" className="hover:text-white">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="/products" className="hover:text-white">
