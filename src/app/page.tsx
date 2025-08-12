@@ -1,23 +1,12 @@
-"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import Lenis from "lenis";
+
 import "lenis/dist/lenis.css";
-import { useEffect } from "react";
+
 
 export default function Home() {
-  useEffect(() => {
-    // Initialize Lenis
-    const lenis = new Lenis();
 
-    // Use requestAnimationFrame to continuously update the scroll
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
   return (
     <div className="font-sans text-gray-800">
       <section
