@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import Image from "next/image";
+import Link from "next/link";
 
-const Home = () => {
+export default function Home() {
   return (
     <div className="font-sans text-gray-800">
       <section
@@ -26,7 +26,7 @@ const Home = () => {
 
           <div className="mt-8">
             <Link
-              to="/products"
+              href="/products"
               className="bg-blue-600 hover:bg-blue-700 text-white text-sm md:text-base font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2 transition duration-300"
             >
               DISCOVER OUR PRODUCTS
@@ -64,7 +64,7 @@ const Home = () => {
         <div className="grid gap-8 grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto">
           <div className="bg-white rounded shadow-md overflow-hidden">
             <img
-              src="/assets/Scrap_steel.png"
+              src="./public/assets/Scrap_Steel.png"
               alt="Scrap Steel"
               className="w-full h-48 object-cover"
             />
@@ -79,18 +79,17 @@ const Home = () => {
                 <li>Fair Market Pricing</li>
                 <li>Pickup Services</li>
               </ul>
-              <button
-                onClick={() => (window.location.href = "/products")}
-                className="mt-4 bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 transition"
-              >
+              <button className="mt-4 bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 transition">
                 Learn More
               </button>
             </div>
           </div>
 
           <div className="bg-white rounded shadow-md overflow-hidden">
-            <img
-              src="/assets/Pipe_product.png"
+            <Image
+              width={400}
+              height={400}
+              src="/assets/Pipe_Product.png"
               alt="Pipe Products"
               className="w-full h-48 object-cover"
             />
@@ -105,17 +104,16 @@ const Home = () => {
                 <li>Various Grades</li>
                 <li>MTR Available</li>
               </ul>
-              <button
-                onClick={() => (window.location.href = "/products")}
-                className="mt-4 bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 transition"
-              >
+              <button className="mt-4 bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 transition">
                 Learn More
               </button>
             </div>
           </div>
 
           <div className="bg-white rounded shadow-md overflow-hidden">
-            <img
+            <Image
+             width={400}
+              height={400}
               src="/assets/Valve.png"
               alt="Valve Casting"
               className="w-full h-48 object-cover"
@@ -131,10 +129,7 @@ const Home = () => {
                 <li>Quality Assured</li>
                 <li>Multi-Industry</li>
               </ul>
-              <button
-                onClick={() => (window.location.href = "/products")}
-                className="mt-4 bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 transition"
-              >
+              <button className="mt-4 bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 transition">
                 Learn More
               </button>
             </div>
@@ -156,7 +151,9 @@ const Home = () => {
 
         <div className="grid gap-8 grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto">
           <div className="text-center p-6 bg-gray-50 rounded shadow hover:shadow-lg transition">
-            <img
+            <Image
+              width={400}
+              height={400}
               src="/assets/quality.png"
               alt="Quality Assurance"
               className="w-16 h-16 mx-auto mb-4"
@@ -169,7 +166,9 @@ const Home = () => {
           </div>
 
           <div className="text-center p-6 bg-gray-50 rounded shadow hover:shadow-lg transition">
-            <img
+            <Image
+              width={400}
+              height={400}
               src="/assets/trust.png"
               alt="Reliability"
               className="w-16 h-16 mx-auto mb-4"
@@ -182,7 +181,9 @@ const Home = () => {
           </div>
 
           <div className="text-center p-6 bg-gray-50 rounded shadow hover:shadow-lg transition">
-            <img
+            <Image
+              width={400}
+              height={400}
               src="/assets/expert.png"
               alt="Expertise"
               className="w-16 h-16 mx-auto mb-4"
@@ -197,6 +198,4 @@ const Home = () => {
       </section>
     </div>
   );
-};
-
-export default Home;
+}
