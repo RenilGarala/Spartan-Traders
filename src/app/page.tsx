@@ -15,7 +15,7 @@ export default function Home() {
           backgroundImage: "url('/assets/Hero_bg.png')",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
+
         <div className="relative z-10 max-w-4xl text-center px-4">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
             Powering Progress with Premium Industrial Materials
