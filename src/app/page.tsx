@@ -1,23 +1,12 @@
-"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import Lenis from "lenis";
+
 import "lenis/dist/lenis.css";
-import { useEffect } from "react";
+
 
 export default function Home() {
-  useEffect(() => {
-    // Initialize Lenis
-    const lenis = new Lenis();
 
-    // Use requestAnimationFrame to continuously update the scroll
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
   return (
     <div className="font-sans text-gray-800">
       <section
@@ -26,7 +15,7 @@ export default function Home() {
           backgroundImage: "url('/assets/Hero_bg.png')",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
+
         <div className="relative z-10 max-w-4xl text-center px-4">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
             Powering Progress with Premium Industrial Materials
@@ -82,7 +71,7 @@ export default function Home() {
             <Image
               width={400}
               height={400}
-              src="./public/assets/Scrap_Steel.png"
+              src="/assets/Scrap_Steel.png"
               alt="Scrap Steel"
               className="w-full h-48 object-cover"
             />

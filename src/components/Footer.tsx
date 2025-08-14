@@ -3,6 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 
+const footLinks = [
+  {title: "Home", href: "/"},
+  {title: "Products", href: "/products"},
+  {title: "About Us", href: "/about"},
+  {title: "Contact", href: "/contact"},
+]
+
 const Footer = () => {
   return (
     <footer className="bg-neutral-800 text-gray-300 py-10">
@@ -10,9 +17,9 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row justify-between gap-10">
           <div className="w-full sm:w-3/4 lg:w-2/3">
             <Image
-              width={400}
-              height={400}
-              className="h-10 mb-6"
+              width={200}
+              height={200}
+              className="h-10 w-55 mb-6"
               src="/assets/spartan-logo.png"
               alt="Spartan Traders"
             />
@@ -29,26 +36,13 @@ const Footer = () => {
                 Quick Links
               </h3>
               <ul className="space-y-2 text-sm">
-                <li>
-                  <Link href="/" className="hover:text-white">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <a href="/products" className="hover:text-white">
-                    Products
-                  </a>
-                </li>
-                <li>
-                  <a href="/about" className="hover:text-white">
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a href="/contact" className="hover:text-white">
-                    Contact
-                  </a>
-                </li>
+                {footLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link href={link.href} className="hover:text-white">
+                      {link.title}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
