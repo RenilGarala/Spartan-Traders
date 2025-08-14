@@ -65,7 +65,7 @@ export default function Contact() {
         <div className="bg-white p-6 rounded-lg border shadow-sm">
           <h4 className="font-semibold mb-4">Send Us a Message</h4>
           <p className="text-gray-600 text-sm mb-6">
-            Fill out the form below and we'll get back to you promptly
+            Fill out the form below and we&apos;ll get back to you promptly
           </p>
           <form className="space-y-4">
             <div className="grid sm:grid-cols-2 gap-4">
@@ -118,5 +118,4 @@ export default function Contact() {
       </div>
     </div>
   );
-};
-
+}

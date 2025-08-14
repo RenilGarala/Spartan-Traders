@@ -1,4 +1,6 @@
+
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 
 const Footer = () => {
@@ -7,7 +9,9 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row justify-between gap-10">
           <div className="w-full sm:w-3/4 lg:w-2/3">
-            <img
+            <Image
+              width={400}
+              height={400}
               className="h-10 mb-6"
               src="/assets/spartan-logo.png"
               alt="Spartan Traders"
