@@ -1,12 +1,9 @@
-
 import Image from "next/image";
 import Link from "next/link";
 
 import "lenis/dist/lenis.css";
 
-
 export default function Home() {
-
   return (
     <div className="font-sans text-gray-800">
       <section
@@ -15,7 +12,6 @@ export default function Home() {
           backgroundImage: "url('/assets/Hero_bg.png')",
         }}
       >
-
         <div className="relative z-10 max-w-4xl text-center px-4">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
             Powering Progress with Premium Industrial Materials
@@ -71,7 +67,7 @@ export default function Home() {
             <Image
               width={400}
               height={400}
-              src="/assets/Scrap_Steel.png"
+              src="/assets/scrap-steel.png"
               alt="Scrap Steel"
               className="w-full h-48 object-cover"
             />
@@ -96,7 +92,7 @@ export default function Home() {
             <Image
               width={400}
               height={400}
-              src="/assets/Pipe_Product.png"
+              src="/assets/pipe-product.png"
               alt="Pipe Products"
               className="w-full h-48 object-cover"
             />
@@ -206,3 +202,6 @@ export default function Home() {
     </div>
   );
 }
+
+/*
+ */

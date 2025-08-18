@@ -93,6 +93,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
           ? "0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset"
           : "none",
         width: visible ? "90%" : "100%",
+        borderRadius: visible ? "12px" : "0px",
         y: visible ? 10 : 0,
       }}
       transition={{
@@ -104,7 +105,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         minWidth: "800px",
       }}
       className={cn(
-        "relative z-[60] mx-auto bg-white hidden w-full flex-row items-center justify-between self-start rounded-md px-4 py-2 lg:flex dark:bg-transparent",
+        "relative z-[60] mx-auto bg-neutral-100 hidden w-full flex-row items-center justify-between self-start rounded-md px-4 py-2 lg:flex dark:bg-transparent",
         visible && "bg-white/90 dark:bg-neutral-950/80",
         className
       )}
