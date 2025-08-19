@@ -29,11 +29,11 @@ export default function Home() {
 
   useEffect(() => {
     const newDots = [...Array(20)].map(() => ({
-      size: Math.random() * 4 + 1,
+      size: 3 * 4 + 1,
       offsetX: (3 - 0.5) * 100,
       offsetY: (3 - 0.5) * 100,
-      delay: Math.random() * 3,
-      duration: Math.random() * 3 + 2,
+      delay: 2 * 3,
+      duration: 4 * 3 + 2,
     }));
     setDots(newDots);
   }, []);
@@ -131,7 +131,7 @@ export default function Home() {
         >
           <div className="mb-8">
             <h1 className="text-6xl md:text-8xl font-black leading-tight bg-gradient-to-r from-white via-blue-100 to-blue-300 bg-clip-text text-transparent animate-pulse">
-              SPARTAN
+              SPARTAN TRADERS
             </h1>
             <div className="text-3xl md:text-5xl font-light tracking-wider text-blue-200 mt-2">
               STEEL SOLUTIONS
@@ -276,7 +276,7 @@ export default function Home() {
               WHY CHOOSE SPARTAN
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              We're not just another industrial supplier — we're your trusted
+              We&apos;re not just another industrial supplier — we&apos;re your trusted
               partner committed to delivering excellence, reliability, and
               innovation.
             </p>
