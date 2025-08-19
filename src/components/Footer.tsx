@@ -70,7 +70,7 @@ const Footer: React.FC = () => {
                   <div className="absolute inset-0 bg-blue-400/20 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-2xl font-black text-white bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+                  <span className="text-2xl font-black text-white bg-gradient-to-r from-white to-blue-100 bg-clip-text">
                     SPARTAN
                   </span>
                   <span className="text-sm text-blue-300 font-medium -mt-1">
