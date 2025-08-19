@@ -105,8 +105,8 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         minWidth: "800px",
       }}
       className={cn(
-        "relative z-[60] mx-auto bg-neutral-100 hidden w-full flex-row items-center justify-between self-start rounded-md px-4 py-2 lg:flex dark:bg-transparent",
-        visible && "bg-white/90 dark:bg-neutral-950/80",
+        "relative z-[60] mx-auto bg-blue-400/60 hidden w-full flex-row items-center justify-between self-start rounded-md px-4 py-2 lg:flex dark:bg-transparent",
+        visible && "bg-blue-400/50 dark:bg-neutral-950/80",
         className
       )}
     >
@@ -122,7 +122,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
     <motion.div
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm ml-auto font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2",
+        "absolute inset-0 hidden flex-1 flex-row  items-center justify-center space-x-2 text-sm ml-auto   transition duration-200 font-medium text-gray-100 hover:text-gray-700 lg:flex lg:space-x-2",
         className
       )}
     >
@@ -130,14 +130,14 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
         <a
           onMouseEnter={() => setHovered(idx)}
           onClick={onItemClick}
-          className="relative px-4 py-2 text-neutral-800 dark:text-neutral-300"
+          className="relative px-4 py-2 text-neutral-100 dark:text-neutral-300"
           key={`link-${idx}`}
           href={item.link}
         >
           {hovered === idx && (
             <motion.div
               layoutId="hovered"
-              className="absolute inset-0 h-full w-full rounded-full bg-gray-100 dark:bg-neutral-800"
+              className="absolute inset-0 h-full w-full rounded-full bg-blue-800/30 dark:bg-neutral-800"
             />
           )}
           <span className="relative z-20">{item.name}</span>
@@ -238,7 +238,12 @@ export const NavbarLogo = () => {
       href="/"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
     >
-      <Image src="/assets/Header_Logo.png" alt="logo" width={200} height={200} />
+      <Image
+        src="/assets/spartan-logo.png"
+        alt="logo"
+        width={200}
+        height={200}
+      />
     </Link>
   );
 };
