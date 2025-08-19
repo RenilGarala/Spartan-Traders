@@ -30,8 +30,8 @@ export default function Home() {
   useEffect(() => {
     const newDots = [...Array(20)].map(() => ({
       size: Math.random() * 4 + 1,
-      offsetX: (Math.random() - 0.5) * 100,
-      offsetY: (Math.random() - 0.5) * 100,
+      offsetX: (3 - 0.5) * 100,
+      offsetY: (3 - 0.5) * 100,
       delay: Math.random() * 3,
       duration: Math.random() * 3 + 2,
     }));
