@@ -157,7 +157,7 @@ const About: React.FC = () => {
                 </h3>
               </div>
               <p className="text-blue-100 leading-relaxed">
-                To be Canada's most trusted and innovative steel trading company, setting industry standards 
+                To be Canada&apos;s most trusted and innovative steel trading company, setting industry standards 
                 for quality, service, and sustainability while pioneering the future of industrial materials.
               </p>
             </div>
@@ -173,8 +173,8 @@ const About: React.FC = () => {
                 </h3>
               </div>
               <p className="text-purple-100 leading-relaxed">
-                To provide superior steel products and services that enable our customers' success while 
-                contributing to Canada's industrial growth and infrastructure development through innovation and excellence.
+                To provide superior steel products and services that enable our customers&apos;s success while 
+                contributing to Canada&apos;s industrial growth and infrastructure development through innovation and excellence.
               </p>
             </div>
           </div>
@@ -270,7 +270,7 @@ const About: React.FC = () => {
             Ready to Partner with Excellence?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Experience the Spartan Traders difference. Let's build something extraordinary together.
+            Experience the Spartan Traders difference. Let&apos;s build something extraordinary together.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">

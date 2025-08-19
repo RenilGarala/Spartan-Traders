@@ -44,12 +44,12 @@ const Footer: React.FC = () => {
             key={i}
             className="absolute bg-blue-500 rounded-full opacity-10 animate-pulse"
             style={{
-              width: `${Math.random() * 3 + 1}px`,
-              height: `${Math.random() * 3 + 1}px`,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 4}s`,
-              animationDuration: `${Math.random() * 4 + 3}s`
+              width: `${3 * 3 + 1}px`,
+              height: `${3 * 3 + 1}px`,
+              left: `${4 * 100}%`,
+              top: `${4 * 100}%`,
+              animationDelay: `${4 * 4}s`,
+              animationDuration: `${4 * 4 + 3}s`
             }}
           />
         ))}
@@ -88,7 +88,7 @@ const Footer: React.FC = () => {
               
               {/* Social Media Links */}
               <div className="flex gap-4 mt-6">
-                {socialMediaLinks.map((social, index) => (
+                {socialMediaLinks.map((social) => (
                   <button 
                     key={social.name}
                     className="w-10 h-10 bg-gradient-to-br from-blue-600/20 to-blue-400/20 rounded-full flex items-center justify-center hover:from-blue-500/30 hover:to-blue-300/30 transition-all duration-300 hover:scale-110 group border border-white/10 hover:border-blue-400/50"
