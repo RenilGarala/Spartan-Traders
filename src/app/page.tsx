@@ -130,10 +130,10 @@ export default function Home() {
           }`}
         >
           <div className="mb-8">
-            <h1 className="text-6xl md:text-8xl font-black leading-tight bg-gradient-to-r from-white via-blue-100 to-blue-300 bg-clip-text text-transparent animate-pulse">
+            <h1 className="text-6xl md:text-7xl font-black leading-tight bg-gradient-to-r from-white via-blue-100 to-blue-300 bg-clip-text text-transparent animate-pulse">
               SPARTAN TRADERS
             </h1>
-            <div className="text-3xl md:text-5xl font-light tracking-wider text-blue-200 mt-2">
+            <div className="text-3xl md:text-4xl font-light tracking-wider text-blue-200 mt-2">
               STEEL SOLUTIONS
             </div>
           </div>

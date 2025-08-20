@@ -94,8 +94,8 @@ export default function Contact(): React.JSX.Element {
         
         {/* Hero Section */}
         <div className={`text-center transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <h1 className="text-5xl md:text-7xl font-black leading-tight bg-gradient-to-r from-white via-blue-100 to-blue-300 bg-clip-text text-transparent mb-8">
-            CONTACT SPARTAN
+          <h1 className="text-5xl md:text-6xl font-black leading-tight bg-gradient-to-r from-white via-blue-100 to-blue-300 bg-clip-text text-transparent mb-8">
+            CONTACT SPARTAN TRADERS
           </h1>
           <div className="text-2xl md:text-3xl font-light text-blue-200 mb-8">
             Steel Solutions Team
