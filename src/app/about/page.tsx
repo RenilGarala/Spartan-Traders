@@ -82,12 +82,12 @@ const About: React.FC = () => {
             key={i}
             className="absolute bg-blue-500 rounded-full opacity-10 animate-pulse"
             style={{
-              width: `${Math.random() * 4 + 1}px`,
-              height: `${Math.random() * 4 + 1}px`,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${Math.random() * 4 + 3}s`
+              width: `${3 * 4 + 1}px`,
+              height: `${3 * 4 + 1}px`,
+              left: `${3 * 100}%`,
+              top: `${3 * 100}%`,
+              animationDelay: `${3 * 5}s`,
+              animationDuration: `${3 * 4 + 3}s`
             }}
           />
         ))}
