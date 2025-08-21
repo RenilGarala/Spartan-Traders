@@ -168,7 +168,7 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
       }}
       className={cn(
         "relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-transparent px-0 py-2 lg:hidden",
-        visible && "bg-white/80 dark:bg-neutral-950/80",
+        visible && "bg-blue-500/80",
         className
       )}
     >
@@ -241,7 +241,8 @@ export const NavbarLogo = () => {
         src="/assets/spartan-logo.png"
         alt="logo"
         width={200}
-        height={200}
+        height={20}
+        className="object-fit"
       />
     </Link>
   );
