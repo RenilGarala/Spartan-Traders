@@ -35,7 +35,6 @@ export default function Products(): React.JSX.Element {
   };
 
   const ProductCard: React.FC<ProductCardProps> = ({
-    img,
     title,
     desc,
     features,
@@ -216,7 +215,7 @@ export default function Products(): React.JSX.Element {
             Products & Services Excellence
           </div>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Explore Spartan Traders' comprehensive offering: carbon steel pipe products, 
+            Explore Spartan Traders comprehensive offering: carbon steel pipe products, 
             precision valve casting components, and professional scrap steel trading services across Canada.
           </p>
         </div>
