@@ -150,7 +150,7 @@ export default function Contact(): React.JSX.Element {
               
               <p className="text-gray-300 mb-6 leading-relaxed">
                 We understand that time is critical in industrial operations. 
-                That's why we've built our service around rapid response and reliable delivery.
+                That&apos;s why we&apos;ve built our service around rapid response and reliable delivery.
               </p>
               
               <div className="space-y-3">
@@ -178,7 +178,7 @@ export default function Contact(): React.JSX.Element {
                 Send Us a Message
               </h4>
               <p className="text-gray-300 leading-relaxed">
-                Fill out the form below and we'll get back to you promptly with a detailed response 
+                Fill out the form below and we&apos;ll get back to you promptly with a detailed response 
                 and next steps for your steel requirements.
               </p>
             </div>
