@@ -224,7 +224,7 @@ export default function Products(): React.JSX.Element {
         <div className="space-y-6">
           <SectionButton section="pipe" title="Pipe Products" icon="🔧" />
           
-          <div className={`overflow-hidden transition-all duration-700 ease-in-out ${
+          <div className={` transition-all duration-700 ease-in-out ${
             openSection === "pipe" ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
           }`}>
             <div className="bg-gradient-to-br from-slate-900/40 via-gray-800/40 to-slate-900/40 backdrop-blur-sm rounded-3xl p-8 border border-white/10 space-y-8">
