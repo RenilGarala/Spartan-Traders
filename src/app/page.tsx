@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 
 export default function Home() {
@@ -125,24 +126,24 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-transparent to-black/30 backdrop-blur-sm" />
 
         <div
-          className={`relative z-10 max-w-6xl text-center px-6 transition-all duration-2000 ${
+          className={`relative z-10  md:max-w-6xl text-center px-6 transition-all duration-2000 ${
             isLoaded ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
           }`}
         >
           <div className="mb-8">
-            <h1 className="text-6xl md:text-7xl font-black leading-tight bg-gradient-to-r from-white via-blue-100 to-blue-300 bg-clip-text text-transparent animate-pulse">
+            <h1 className="text-3xl md:text-6xl font-black leading-tight bg-gradient-to-r from-white via-blue-100 to-blue-300 bg-clip-text text-transparent animate-pulse">
               SPARTAN TRADERS
             </h1>
-            <div className="text-3xl md:text-4xl font-light tracking-wider text-blue-200 mt-2">
+            <div className="text-2xl md:text-4xl font-light tracking-wider text-blue-200 mt-2">
               STEEL SOLUTIONS
             </div>
           </div>
 
           <div className="space-y-6 mb-12">
-            <p className="text-xl md:text-3xl font-medium text-blue-100 leading-relaxed">
+            <p className="text-lg md:text-2xl font-medium text-blue-100 leading-relaxed">
               Powering Progress with Premium Industrial Materials
             </p>
-            <p className="text-lg md:text-xl text-blue-200/80 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-sm md:text-xl text-blue-200/80 max-w-4xl mx-auto leading-relaxed">
               Leading Canadian distributor of scrap steel, carbon steel pipes,
               and valve casting products. Quality materials for industrial
               applications that build the future.
@@ -150,7 +151,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <button className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 rounded-full font-semibold text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25">
+            <button className="group relative px-6 py-3 md:px-8 md:py-4 md:text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 rounded-full font-semibold text-md overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25">
               <span className="relative z-10 flex items-center gap-3">
                 DISCOVER PRODUCTS
                 <svg
@@ -170,7 +171,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </button>
 
-            <button className="group px-8 py-4 border-2 border-blue-400/50 rounded-full font-semibold text-lg backdrop-blur-sm bg-white/5 hover:bg-white/10 hover:border-blue-300 transition-all duration-300 hover:scale-105">
+            <button className="group md:px-8 md:py-4 px-6 py-3 border-2 border-blue-400/50 rounded-full font-semibold text-md md:text-lg backdrop-blur-sm bg-white/5 hover:bg-white/10 hover:border-blue-300 transition-all duration-300 hover:scale-105">
               <span className="flex items-center gap-3">
                 CONTACT US
                 <svg
@@ -213,10 +214,10 @@ export default function Home() {
 
         <div className="relative z-10 max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-black mb-6 bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-black mb-6 bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
               INDUSTRIAL SOLUTIONS
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-md text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Spartan Traders is your trusted Canadian partner for premium steel
               solutions. We serve industrial clients with unmatched quality and
               exceptional service.
@@ -232,12 +233,12 @@ export default function Home() {
                 {/* Glassmorphism effect */}
                 <div className="absolute inset-0 bg-white/5 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                <div className="relative p-8 h-full flex flex-col">
+                <div className="relative md:p-8 p-6 h-full flex flex-col">
                   <div className="mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-300">
                       <div className="w-8 h-8 bg-white/20 rounded-lg" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-blue-100 transition-colors">
+                    <h3 className="text-xl md:text-2xl font-bold mb-4 text-white group-hover:text-blue-100 transition-colors">
                       {product.title}
                     </h3>
                   </div>
@@ -257,10 +258,11 @@ export default function Home() {
                       </div>
                     ))}
                   </div>
-
-                  <button className="w-full py-3 bg-gradient-to-r from-blue-600 to-blue-500 rounded-xl font-semibold hover:from-blue-500 hover:to-blue-400 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-blue-500/25">
-                    EXPLORE MORE
-                  </button>
+                  <Link href={"/products"}>
+                    <button className="w-full py-3 bg-gradient-to-r from-blue-600 to-blue-500 rounded-xl font-semibold hover:from-blue-500 hover:to-blue-400 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-blue-500/25">
+                      EXPLORE MORE
+                    </button>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -272,13 +274,13 @@ export default function Home() {
       <section className="py-24 px-6 bg-gradient-to-br from-gray-950 via-slate-900 to-gray-950 relative">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-black mb-6 bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-black md:mb-6 mb-3 bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
               WHY CHOOSE SPARTAN
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              We&apos;re not just another industrial supplier — we&apos;re your trusted
-              partner committed to delivering excellence, reliability, and
-              innovation.
+            <p className="text-md md:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              We&apos;re not just another industrial supplier — we&apos;re your
+              trusted partner committed to delivering excellence, reliability,
+              and innovation.
             </p>
           </div>
 
@@ -323,7 +325,7 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="group px-10 py-4 bg-gradient-to-r from-white via-blue-50 to-white text-blue-900 rounded-full font-bold text-lg hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-white/25">
+            {/* <button className="group px-10 py-4 bg-gradient-to-r from-white via-blue-50 to-white text-blue-900 rounded-full font-bold text-lg hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-white/25">
               <span className="flex items-center gap-3">
                 GET QUOTE NOW
                 <svg
@@ -340,7 +342,7 @@ export default function Home() {
                   />
                 </svg>
               </span>
-            </button>
+            </button> */}
 
             <button className="group px-10 py-4 border-2 border-white/50 rounded-full font-bold text-lg backdrop-blur-sm bg-white/5 hover:bg-white/10 hover:border-white transition-all duration-300 hover:scale-105 text-white">
               CALL: 1-800-SPARTAN
