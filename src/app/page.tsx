@@ -151,44 +151,48 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <button className="group relative px-6 py-3 md:px-8 md:py-4 md:text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 rounded-full font-semibold text-md overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25">
-              <span className="relative z-10 flex items-center gap-3">
-                DISCOVER PRODUCTS
-                <svg
-                  className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </button>
+            <Link href="/products">
+              <button className="group relative px-6 py-3 md:px-8 md:py-4 md:text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 rounded-full font-semibold text-md overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25">
+                <span className="relative z-10 flex items-center gap-3">
+                  DISCOVER PRODUCTS
+                  <svg
+                    className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </button>
+            </Link>
 
-            <button className="group md:px-8 md:py-4 px-6 py-3 border-2 border-blue-400/50 rounded-full font-semibold text-md md:text-lg backdrop-blur-sm bg-white/5 hover:bg-white/10 hover:border-blue-300 transition-all duration-300 hover:scale-105">
-              <span className="flex items-center gap-3">
-                CONTACT US
-                <svg
-                  className="w-5 h-5 group-hover:rotate-45 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 4l8 8-8 8M4 12h16"
-                  />
-                </svg>
-              </span>
-            </button>
+            <Link href={"/contact"}>
+              <button className="group md:px-8 md:py-4 px-6 py-3 border-2 border-blue-400/50 rounded-full font-semibold text-md md:text-lg backdrop-blur-sm bg-white/5 hover:bg-white/10 hover:border-blue-300 transition-all duration-300 hover:scale-105">
+                <span className="flex items-center gap-3">
+                  CONTACT US
+                  <svg
+                    className="w-5 h-5 group-hover:rotate-45 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 4l8 8-8 8M4 12h16"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </Link>
           </div>
         </div>
 
