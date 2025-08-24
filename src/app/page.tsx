@@ -89,7 +89,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="font-sans text-white bg-black overflow-hidden">
+    <main className="font-sans text-white bg-black overflow-hidden">
       {/* Hero Section */}
       <section
         ref={heroRef}
@@ -354,6 +354,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }
