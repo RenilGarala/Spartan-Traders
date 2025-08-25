@@ -37,12 +37,12 @@ const Footer: React.FC = () => {
             key={i}
             className="absolute bg-blue-500 rounded-full opacity-10 animate-ping"
             style={{
-              width: `${Math.random() * 12 + 8}px`,
-              height: `${Math.random() * 12 + 8}px`,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              width: `${3 * 12 + 8}px`,
+              height: `${3 * 12 + 8}px`,
+              left: `${3 * 100}%`,
+              top: `${3 * 100}%`,
               animationDelay: `${i * 2}s`,
-              animationDuration: `${6 + Math.random() * 4}s`,
+              animationDuration: `${6 + 3 * 4}s`,
             }}
           />
         ))}
