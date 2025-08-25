@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 
@@ -42,6 +43,7 @@ export default function Home() {
   const products = [
     {
       title: "Scrap Steel",
+      img: "/assets/scrap-steel.png",
       description:
         "Professional scrap steel buying and selling services with competitive pricing and reliable pickup.",
       features: [
@@ -53,6 +55,7 @@ export default function Home() {
     },
     {
       title: "Pipe Products",
+      img: "/assets/pipe-product.png",
       description:
         "Comprehensive range of carbon steel pipes including OCTG, line pipe, and seamless products.",
       features: ["OCTG & Line Pipe", "Various Grades", "MTR Available"],
@@ -60,6 +63,7 @@ export default function Home() {
     },
     {
       title: "Valve Casting Products",
+      img: "/assets/Valve.png",
       description:
         "High-quality valve components and castings for industrial applications with custom manufacturing.",
       features: ["Custom Manufacturing", "Quality Assured", "Multi-Industry"],
@@ -237,36 +241,44 @@ export default function Home() {
                 {/* Glassmorphism effect */}
                 <div className="absolute inset-0 bg-white/5 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                <div className="relative md:p-8 p-6 h-full flex flex-col">
-                  <div className="mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-300">
-                      <div className="w-8 h-8 bg-white/20 rounded-lg" />
+                <div className="relative h-full flex flex-col">
+                  <div className="mb:p-6 p-3">
+                    <Image
+                      src={product.img}
+                      alt={product.title}
+                      width={500}
+                      height={100}
+                      className="object-fit rounded-lg"
+                    />
+                  </div>
+                  <div className="mb:p-8 p-6">
+                    <div className="mb-6">
+                      <h3 className="text-xl md:text-2xl font-bold mb-4 text-white group-hover:text-blue-100 transition-colors">
+                        {product.title}
+                      </h3>
                     </div>
-                    <h3 className="text-xl md:text-2xl font-bold mb-4 text-white group-hover:text-blue-100 transition-colors">
-                      {product.title}
-                    </h3>
-                  </div>
 
-                  <p className="text-gray-300 mb-6 leading-relaxed flex-grow">
-                    {product.description}
-                  </p>
+                    <p className="text-gray-300 mb-6 leading-relaxed flex-grow">
+                      {product.description}
+                    </p>
 
-                  <div className="space-y-2 mb-8">
-                    {product.features.map((feature, i) => (
-                      <div
-                        key={i}
-                        className="flex items-center gap-3 text-sm text-gray-400"
-                      >
-                        <div className="w-2 h-2 bg-blue-400 rounded-full" />
-                        {feature}
-                      </div>
-                    ))}
+                    <div className="space-y-2 mb-8">
+                      {product.features.map((feature, i) => (
+                        <div
+                          key={i}
+                          className="flex items-center gap-3 text-sm text-gray-400"
+                        >
+                          <div className="w-2 h-2 bg-blue-400 rounded-full" />
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+                    <Link href={"/products"}>
+                      <button className="w-full py-3 bg-gradient-to-r from-blue-600 to-blue-500 rounded-xl font-semibold hover:from-blue-500 hover:to-blue-400 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-blue-500/25">
+                        EXPLORE MORE
+                      </button>
+                    </Link>
                   </div>
-                  <Link href={"/products"}>
-                    <button className="w-full py-3 bg-gradient-to-r from-blue-600 to-blue-500 rounded-xl font-semibold hover:from-blue-500 hover:to-blue-400 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-blue-500/25">
-                      EXPLORE MORE
-                    </button>
-                  </Link>
                 </div>
               </div>
             ))}
