@@ -105,7 +105,7 @@ export default function Home() {
       >
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 max-w-5xl my-44 mx-auto text-center px-6">
+        <div className="relative z-10 max-w-5xl mt-28 mb-40 sm:mt-44 sm:mb-44 mx-auto text-center px-6">
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
             SPARTAN <span className="text-blue-400">TRADERS</span>
           </h1>
