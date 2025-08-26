@@ -243,7 +243,7 @@ export default function Products(): React.JSX.Element {
                 </p>
                 <div className="grid md:grid-cols-2 gap-8">
                   <ProductCard
-                    img="/assets/pipe-product.png"
+                    img="/assets/casing-tubing-production-line.jpg"
                     title="OCTG (Oil Country Tubular Goods)"
                     desc="High-quality oil country tubular goods for drilling and production operations."
                     features={[

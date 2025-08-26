@@ -51,7 +51,7 @@ export default function Home() {
         "Fair Market Pricing",
         "Pickup Services",
       ],
-      gradient: "from-slate-900 via-slate-700 to-slate-500",
+      gradient: "from-slate-800 via-slate-700 to-slate-700",
     },
     {
       title: "Pipe Products",
@@ -59,7 +59,7 @@ export default function Home() {
       description:
         "Comprehensive range of carbon steel pipes including OCTG, line pipe, and seamless products.",
       features: ["OCTG & Line Pipe", "Various Grades", "MTR Available"],
-      gradient: "from-zinc-900 via-zinc-700 to-zinc-500",
+      gradient: "from-slate-800 via-slate-700 to-slate-700",
     },
     {
       title: "Valve Casting Products",
@@ -67,7 +67,7 @@ export default function Home() {
       description:
         "High-quality valve components and castings for industrial applications with custom manufacturing.",
       features: ["Custom Manufacturing", "Quality Assured", "Multi-Industry"],
-      gradient: "from-stone-900 via-stone-700 to-stone-500",
+      gradient: "from-slate-800 via-slate-700 to-slate-700",
     },
   ];
 
@@ -96,68 +96,38 @@ export default function Home() {
     <main className="font-sans text-white bg-black overflow-hidden">
       {/* Hero Section */}
       <section
-        ref={heroRef}
-        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+        className="relative max-h-screen flex items-center justify-center text-white"
         style={{
-          background: `
-            radial-gradient(circle at ${mousePosition.x * 0.1}% ${
-            mousePosition.y * 0.1
-          }%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
-            linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)
-          `,
+          backgroundImage: "url('/assets/Hero_bg.png')", // replace with your steel/industrial image
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          {dots.map((dot, i) => (
-            <div
-              key={i}
-              className="absolute bg-blue-500 rounded-full opacity-20 animate-pulse pointer-events-none"
-              style={{
-                width: `${dot.size}px`,
-                height: `${dot.size}px`,
-                left: `${mousePosition.x + dot.offsetX}px`,
-                top: `${mousePosition.y + dot.offsetY}px`,
-                animationDelay: `${dot.delay}s`,
-                animationDuration: `${dot.duration}s`,
-                transform: "translate(-50%, -50%)",
-              }}
-            />
-          ))}
-        </div>
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 max-w-5xl my-44 mx-auto text-center px-6">
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
+            SPARTAN <span className="text-blue-400">TRADERS</span>
+          </h1>
+          <p className="text-2xl md:text-4xl mt-3 font-light text-blue-200">
+            Steel Solutions
+          </p>
 
-        {/* Glassmorphism overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-transparent to-black/30 backdrop-blur-sm" />
+          {/* Subtitle */}
+          <p className="mt-8 text-lg md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+            Powering Progress with Premium Industrial Materials
+          </p>
+          <p className="mt-4 text-sm md:text-lg text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            Leading Canadian distributor of scrap steel, carbon steel pipes, and
+            valve casting products. Delivering quality materials for industrial
+            applications that build the future.
+          </p>
 
-        <div
-          className={`relative z-10  md:max-w-6xl text-center px-6 transition-all duration-2000 ${
-            isLoaded ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
-          }`}
-        >
-          <div className="mb-8">
-            <h1 className="text-3xl md:text-6xl font-black leading-tight bg-gradient-to-r from-white via-blue-100 to-blue-300 bg-clip-text text-transparent animate-pulse">
-              SPARTAN TRADERS
-            </h1>
-            <div className="text-2xl md:text-4xl font-light tracking-wider text-blue-200 mt-2">
-              STEEL SOLUTIONS
-            </div>
-          </div>
-
-          <div className="space-y-6 mb-12">
-            <p className="text-lg md:text-2xl font-medium text-blue-100 leading-relaxed">
-              Powering Progress with Premium Industrial Materials
-            </p>
-            <p className="text-sm md:text-xl text-blue-200/80 max-w-4xl mx-auto leading-relaxed">
-              Leading Canadian distributor of scrap steel, carbon steel pipes,
-              and valve casting products. Quality materials for industrial
-              applications that build the future.
-            </p>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Link href="/products">
-              <button className="group relative px-6 py-3 md:px-8 md:py-4 md:text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 rounded-full font-semibold text-md overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25">
-                <span className="relative z-10 flex items-center gap-3">
+          {/* Button */}
+          <div className="mt-10 flex justify-center">
+            <Link href="/products" className="w-full sm:w-auto">
+              <button className="w-auto px-5 py-3 md:px-6 md:py-3 text-base md:text-lg bg-blue-600 rounded-full font-semibold tracking-wide overflow-hidden hover:bg-blue-500 transition-all duration-300 shadow-lg hover:scale-105">
+                <span className="flex items-center justify-center gap-2 text-sm sm:text-base">
                   DISCOVER PRODUCTS
                   <svg
                     className="w-5 h-5 group-hover:translate-x-1 transition-transform"
@@ -173,36 +143,14 @@ export default function Home() {
                     />
                   </svg>
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </button>
-            </Link>
-
-            <Link href={"/contact"}>
-              <button className="group md:px-8 md:py-4 px-6 py-3 border-2 border-blue-400/50 rounded-full font-semibold text-md md:text-lg backdrop-blur-sm bg-white/5 hover:bg-white/10 hover:border-blue-300 transition-all duration-300 hover:scale-105">
-                <span className="flex items-center gap-3">
-                  CONTACT US
-                  <svg
-                    className="w-5 h-5 group-hover:rotate-45 transition-transform"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M12 4l8 8-8 8M4 12h16"
-                    />
-                  </svg>
-                </span>
               </button>
             </Link>
           </div>
         </div>
 
-        {/* Scroll indicator */}
+        {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-blue-400/50 rounded-full flex justify-center">
+          <div className="w-6 h-10 border-2 border-blue-400/70 rounded-full flex justify-center">
             <div className="w-1 h-3 bg-blue-400 rounded-full mt-2 animate-pulse" />
           </div>
         </div>
@@ -360,8 +308,8 @@ export default function Home() {
               </span>
             </button> */}
 
-            <button className="group px-10 py-4 border-2 border-white/50 rounded-full font-bold text-lg backdrop-blur-sm bg-white/5 hover:bg-white/10 hover:border-white transition-all duration-300 hover:scale-105 text-white">
-              CALL: 1-800-SPARTAN
+            <button className="group px-10 py-4 border-2 border-white/50 rounded-full font-bold text-lg backdrop-blur-sm bg-white/5 text-white">
+              CALL: (226) 919-6448
             </button>
           </div>
         </div>
