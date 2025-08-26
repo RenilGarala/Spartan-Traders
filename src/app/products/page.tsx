@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ProductCardProps {
   img: string;
@@ -225,6 +226,7 @@ export default function Products(): React.JSX.Element {
         {/* Pipe Products Section */}
         <div className="space-y-6">
           <SectionButton section="pipe" title="Pipe Products" icon="🔧" />
+
           <AnimatePresence mode="wait">
             {openSection === "pipe" && (
               <motion.div
@@ -233,15 +235,16 @@ export default function Products(): React.JSX.Element {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 20 }}
                 transition={{ duration: 0.2 }}
-                className="bg-gradient-to-br from-slate-900/40 via-gray-800/40 to-slate-900/40 backdrop-blur-sm rounded-3xl p-4 border border-white/10 space-y-8"
+                className="bg-gradient-to-br from-slate-900/40 via-gray-800/40 to-slate-900/40 backdrop-blur-sm rounded-3xl p-6 md:p-8 border border-white/10 space-y-8"
               >
-                <p className="md:text-xl text-sm text-gray-300 leading-relaxed">
+                <p className="text-sm md:text-xl text-gray-300 leading-relaxed max-w-4xl">
                   We distribute a complete range of carbon steel pipe products
                   for energy, infrastructure, and industrial applications. All
                   items are supported by proper MTRs and industry
                   certifications.
                 </p>
-                <div className="grid md:grid-cols-2 gap-8">
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                   <ProductCard
                     img="/assets/casing-tubing-production-line.jpg"
                     title="OCTG (Oil Country Tubular Goods)"
@@ -254,6 +257,7 @@ export default function Products(): React.JSX.Element {
                     ]}
                     gradient="from-blue-900/60 via-blue-700/60 to-blue-500/60"
                   />
+
                   <ProductCard
                     img="/assets/pipe-product.png"
                     title="Line Pipe"
@@ -266,16 +270,30 @@ export default function Products(): React.JSX.Element {
                     ]}
                     gradient="from-purple-900/60 via-purple-700/60 to-purple-500/60"
                   />
+
                   <ProductCard
                     img="/assets/pipe-product.png"
                     title="Piling / Hollow Section / Surplus"
                     desc="Structural steel piling and hollow sections for construction projects."
+                    features={[
+                      "ASTM A252 and A500 standards",
+                      "Various diameter options",
+                      "Custom length cutting",
+                      "Structural applications",
+                    ]}
                     gradient="from-green-900/60 via-green-700/60 to-green-500/60"
                   />
+
                   <ProductCard
                     img="/assets/pipe-product.png"
                     title="Seamless Line Pipe"
                     desc="Premium seamless steel pipe for high-pressure applications."
+                    features={[
+                      "High-pressure rated",
+                      "Superior corrosion resistance",
+                      "Precision manufacturing",
+                      "Quality certified materials",
+                    ]}
                     gradient="from-orange-900/60 via-orange-700/60 to-orange-500/60"
                   />
                 </div>
@@ -395,9 +413,11 @@ export default function Products(): React.JSX.Element {
                       manufacturing facilities.
                     </p>
                     <div className="flex gap-4">
-                      <button className="px-8 py-4 bg-gradient-to-r from-green-600 via-green-500 to-green-400 rounded-xl font-semibold text-white text-sm md:text-normal hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/25">
-                        INQUIRE - BUYING
-                      </button>
+                      <Link href="/contact">
+                        <button className="px-8 py-4 bg-gradient-to-r from-green-600 via-green-500 to-green-400 rounded-xl font-semibold text-white text-sm md:text-normal hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/25">
+                          INQUIRE - BUYING
+                        </button>
+                      </Link>
                     </div>
                   </div>
 
@@ -487,24 +507,29 @@ export default function Products(): React.JSX.Element {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="group px-7 py-3 bg-gradient-to-r from-white via-blue-50 to-white text-blue-900 rounded-full font-bold text-normal md:text-lg hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-white/25">
-              <span className="flex items-center justify-center gap-3">
-                REQUEST QUOTE
-                <svg
-                  className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </span>
-            </button>
+            <Link
+              href="/contact"
+              className=" flex flex-col sm:flex-row gap-6 justify-center"
+            >
+              <button className="group px-7 py-3 bg-gradient-to-r from-white via-blue-50 to-white text-blue-900 rounded-full font-bold text-normal md:text-lg hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-white/25">
+                <span className="flex items-center justify-center gap-3">
+                  REQUEST QUOTE
+                  <svg
+                    className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </Link>
 
             <button className="group px-7 py-3 border-2 border-white/50 rounded-full font-bold backdrop-blur-sm bg-white/5 text-normal md:text-lg hover:bg-white/10 hover:border-white transition-all duration-300 hover:scale-105 text-white">
               CALL: (226) 919-6448
