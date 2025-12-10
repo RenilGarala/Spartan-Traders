@@ -1,6 +1,9 @@
 "use client";
-import { sendMessageEmail } from "@/lib/nodemailer";
+import { send } from "@/lib/email";
+import { formSchema } from "@/lib/schema";
 import React, { useState, useEffect } from "react";
+import { toast } from "sonner";
+import z from "zod";
 
 interface ContactInfo {
   icon: string;
@@ -59,10 +62,14 @@ export default function Contact(): React.JSX.Element {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
 
-  const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    sendMessageEmail(formData);
-  };
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      send(values);
+      toast.success("Message sent successfully");
+    } catch (error) {
+      toast.error("Failed to send message. Please try again.");
+    }
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-gray-900 to-slate-950 text-white overflow-hidden">
@@ -196,7 +203,7 @@ export default function Contact(): React.JSX.Element {
                 className="w-full bg-white/5 border border-white/20 rounded-lg p-3 text-sm md:text-base h-28 resize-none"
               />
               <button
-                onClick={handleSubmit}
+                onSubmit={onSubmit}
                 className="w-full px-6 py-3 text-sm md:text-base bg-gradient-to-r from-blue-600 to-blue-400 rounded-lg font-semibold"
               >
                 SEND MESSAGE
