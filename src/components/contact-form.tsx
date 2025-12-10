@@ -30,7 +30,7 @@ export default function ContactForm() {
     },
   });
 
-  const onSubmit = (values: any) => {
+  const onSubmit = (values: z.infer<typeof formSchema>) => {
     try {
       send(values);
       toast.success("Message sent successfully");

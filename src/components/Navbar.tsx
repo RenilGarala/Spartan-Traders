@@ -63,20 +63,15 @@ export function Header() {
   return (
     <Navbar className="top-0 mx-auto md:w-full relative md:fixed">
       {/* Desktop Navigation */}
-      <NavBody className="lg:flex items-center hidden justify-between w-full bg-gradient-to-r from-slate-950 via-gray-900 to-slate-950 border border-white/10">
+      <NavBody className="hidden lg:flex items-center justify-between w-full bg-gradient-to-r from-slate-950 via-gray-900 to-slate-950 border border-white/10">
         <div className="flex flex-1">
           <NavbarLogo />
         </div>
-        <div className="ml-auto flex items-center space-x-4">
+
+        {/* Yeh wrap important hai */}
+        <div className="flex justify-end flex-1 space-x-4">
           <NavItems items={navItems} />
         </div>
-        <NavbarButton
-          className="lg:flex hidden gap-3 items-center justify-center bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 text-white font-semibold px-6 py-3 rounded-xl hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 border border-blue-400/30"
-          variant="gradient"
-        >
-          <PhoneCall size={18} className="text-white" />
-          <span>Book A Call</span>
-        </NavbarButton>
       </NavBody>
 
       {/* Mobile Navigation */}
