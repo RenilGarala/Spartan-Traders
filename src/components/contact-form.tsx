@@ -17,13 +17,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { send } from "@/lib/email";
 import { toast } from "sonner";
-
-const formSchema = z.object({
-  fullName: z.string().min(2, "Naam sahi daal bhai"),
-  email: z.string().email("Email theek se likh"),
-  subject: z.string().min(3, "Subject chhota mat rakh"),
-  message: z.string().min(10, "Thoda detail likh yaar"),
-});
+import { formSchema } from "@/lib/schema";
 
 export default function ContactForm() {
   const form = useForm({
