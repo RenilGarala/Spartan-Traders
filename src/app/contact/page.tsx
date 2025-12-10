@@ -1,4 +1,5 @@
 "use client";
+import { sendMessageEmail } from "@/lib/nodemailer";
 import React, { useState, useEffect } from "react";
 
 interface ContactInfo {
@@ -60,7 +61,7 @@ export default function Contact(): React.JSX.Element {
 
   const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    sendMessageEmail(formData);
   };
 
   return (
