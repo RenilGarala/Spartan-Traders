@@ -87,17 +87,17 @@ export default function Products(): React.JSX.Element {
 
   const valveProducts: ValveProduct[] = [
     {
-      img: "/assets/products/valve.png",
+      img: "/assets/gate-valves.jpeg",
       title: "Gate Valves",
       desc: "Durable gate valves designed for optimal flow control in high-pressure environments.",
     },
     {
-      img: "/assets/products/valve.png",
+      img: "/assets/globe-valves.jpeg",
       title: "Globe Valves",
       desc: "Precision-engineered globe valves for throttling and regulating fluid flow.",
     },
     {
-      img: "/assets/products/valve.png",
+      img: "/assets/check-valve.jpg",
       title: "Check Valves",
       desc: "Reliable check valves to prevent backflow and ensure system safety.",
     },
@@ -267,13 +267,13 @@ export default function Products(): React.JSX.Element {
                     gradient="from-purple-900/60 via-purple-700/60 to-purple-500/60"
                   />
                   <ProductCard
-                    img="/assets/pipe-product.png"
+                    img="/assets/piling.jpeg"
                     title="Piling / Hollow Section / Surplus"
                     desc="Structural steel piling and hollow sections for construction projects."
                     gradient="from-green-900/60 via-green-700/60 to-green-500/60"
                   />
                   <ProductCard
-                    img="/assets/pipe-product.png"
+                    img="/assets/pipe-line.jpg"
                     title="Seamless Line Pipe"
                     desc="Premium seamless steel pipe for high-pressure applications."
                     gradient="from-orange-900/60 via-orange-700/60 to-orange-500/60"
@@ -284,7 +284,6 @@ export default function Products(): React.JSX.Element {
           </AnimatePresence>
         </div>
 
-        {/* Valve Casting Products Section */}
         <div className="space-y-6">
           <SectionButton
             section="valve"
