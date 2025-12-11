@@ -1,5 +1,10 @@
 "use client";
+import ContactForm from "@/components/contact-form";
+import { send } from "@/lib/email";
+import { formSchema } from "@/lib/schema";
 import React, { useState, useEffect } from "react";
+import { toast } from "sonner";
+import z from "zod";
 
 interface ContactInfo {
   icon: string;
@@ -53,15 +58,6 @@ export default function Contact(): React.JSX.Element {
       color: "from-orange-600/20 to-orange-400/20 border-orange-500/30",
     },
   ];
-
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-
-  const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-gray-900 to-slate-950 text-white overflow-hidden">
@@ -149,59 +145,7 @@ export default function Contact(): React.JSX.Element {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-gradient-to-br from-slate-900/60 via-gray-800/60 to-slate-900/60 backdrop-blur-sm p-6 rounded-2xl border border-white/10">
-            <div className="mb-6">
-              <h4 className="text-lg md:text-xl font-bold mb-2 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-                Send Us a Message
-              </h4>
-              <p className="text-gray-300 text-sm md:text-base">
-                Fill out the form below and we&apos;ll get back to you promptly
-                with a detailed response and next steps.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <div className="grid sm:grid-cols-2 gap-4">
-                <input
-                  type="text"
-                  name="fullName"
-                  value={formData.fullName}
-                  onChange={handleInputChange}
-                  placeholder="Your full name"
-                  className="w-full bg-white/5 border border-white/20 rounded-lg p-3 text-sm md:text-base"
-                />
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  placeholder="your.email@company.com"
-                  className="w-full bg-white/5 border border-white/20 rounded-lg p-3 text-sm md:text-base"
-                />
-              </div>
-              <input
-                type="text"
-                name="subject"
-                value={formData.subject}
-                onChange={handleInputChange}
-                placeholder="Brief description"
-                className="w-full bg-white/5 border border-white/20 rounded-lg p-3 text-sm md:text-base"
-              />
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleInputChange}
-                placeholder="Please provide details..."
-                className="w-full bg-white/5 border border-white/20 rounded-lg p-3 text-sm md:text-base h-28 resize-none"
-              />
-              <button
-                onClick={handleSubmit}
-                className="w-full px-6 py-3 text-sm md:text-base bg-gradient-to-r from-blue-600 to-blue-400 rounded-lg font-semibold"
-              >
-                SEND MESSAGE
-              </button>
-            </div>
-          </div>
+          <ContactForm />
         </div>
 
         {/* Emergency */}

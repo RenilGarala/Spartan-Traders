@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import { Header } from "@/components/Navbar";
 import { ReactLenis } from "@/utils/lenis";
+import { Toaster } from "sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
           className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
         >
           <Header />
+          <Toaster position="top-center" />
           {children}
           <Footer />
         </body>

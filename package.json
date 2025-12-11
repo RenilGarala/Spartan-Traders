@@ -9,6 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
+    "@radix-ui/react-label": "^2.1.8",
+    "@radix-ui/react-slot": "^1.2.4",
+    "@react-email/render": "^2.0.0",
     "@react-hook/window-size": "^3.1.1",
     "@tabler/icons-react": "^3.34.1",
     "class-variance-authority": "^0.7.1",
@@ -17,15 +21,21 @@
     "lenis": "^1.3.8",
     "lucide-react": "^0.539.0",
     "motion": "^12.23.12",
-    "next": "15.4.6",
+    "next": "^15.5.7",
+    "nodemailer": "^7.0.11",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "tailwind-merge": "^3.3.1"
+    "react-hook-form": "^7.68.0",
+    "resend": "^6.6.0",
+    "sonner": "^2.0.7",
+    "tailwind-merge": "^3.3.1",
+    "zod": "^4.1.13"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/nodemailer": "^7.0.4",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
