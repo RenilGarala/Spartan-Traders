@@ -56,8 +56,8 @@ const Footer: React.FC = () => {
             <Image
               src="/assets/spartan-logo.png"
               alt="logo"
-              width={240}
-              height={40}
+              width={200}
+              height={34}
               className="object-contain mb-6 ml-4"
             />
             <div className="backdrop-blur-sm bg-white/5 rounded-2xl p-6 border border-white/10 hover:border-blue-500/30 transition-all duration-300">

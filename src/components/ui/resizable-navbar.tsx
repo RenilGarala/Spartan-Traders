@@ -238,7 +238,7 @@ export const NavbarLogo = () => {
         alt="logo"
         width={200}
         height={20}
-        className="object-fit"
+        className="object-fit p-2"
       />
     </Link>
   );
