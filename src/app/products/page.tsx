@@ -219,7 +219,7 @@ export default function Products(): React.JSX.Element {
           </p>
         </div>
 
-        {/* Pipe Products Section */}
+        {/* Custom Casting & Forging Products Section */}
         <div className="space-y-6">
           <SectionButton
             section="pipe"
@@ -303,26 +303,48 @@ export default function Products(): React.JSX.Element {
           </AnimatePresence>
         </div>
 
+        {/* Micro Precision Machined Components Section */}
         <div className="space-y-6">
           <SectionButton
-            section="valve"
-            title="Valve Casting Products"
+            section="micro"
+            title="Micro Precision Machined Components"
             icon="⚙️"
           />
 
           <AnimatePresence mode="wait">
-            {openSection === "valve" && (
+            {openSection === "micro" && (
               <motion.div
-                key="valve"
+                key="micro"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 20 }}
                 transition={{ duration: 0.25 }}
                 className="bg-gradient-to-br from-slate-900/40 via-gray-800/40 to-slate-900/40 backdrop-blur-sm rounded-3xl p-8 border border-white/10 space-y-12"
               >
-                {/* Valve Types Grid */}
+                {/* Product Grid */}
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                  {valveProducts.map((product: ValveProduct, i: number) => (
+                  {[
+                    {
+                      img: "/assets/cnc-turning-components.png",
+                      title: "CNC Turning Components",
+                      desc: "High-precision CNC turned components manufactured with tight tolerances and excellent surface finishing.",
+                    },
+                    {
+                      img: "/assets/micro-machined-parts.png",
+                      title: "Micro Machined Parts",
+                      desc: "Compact and intricate micro machined components designed for industrial and engineering applications.",
+                    },
+                    {
+                      img: "/assets/precision-shafts.png",
+                      title: "Precision Shafts & Pins",
+                      desc: "Durable precision shafts, pins, and miniature components engineered for long-term reliability.",
+                    },
+                    {
+                      img: "/assets/custom-machined-components.png",
+                      title: "Custom Machined Components",
+                      desc: "Custom-built machined components developed according to client drawings and specifications.",
+                    },
+                  ].map((product, i) => (
                     <motion.div
                       key={i}
                       className="group bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-blue-500/50 transition-all duration-300"
@@ -339,10 +361,12 @@ export default function Products(): React.JSX.Element {
                           className="object-cover w-full h-full"
                         />
                       </div>
+
                       <div className="p-6">
                         <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-100 transition-colors">
                           {product.title}
                         </h3>
+
                         <p className="text-gray-300 group-hover:text-gray-200 transition-colors leading-relaxed">
                           {product.desc}
                         </p>
@@ -351,13 +375,45 @@ export default function Products(): React.JSX.Element {
                   ))}
                 </div>
 
-                {/* Key Features */}
+                {/* Features */}
                 <div>
                   <h4 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-                    Key Features & Benefits
+                    Key Features & Capabilities
                   </h4>
+
                   <div className="grid md:grid-cols-3 gap-6">
-                    {valveFeatures.map((feature: Feature, i: number) => (
+                    {[
+                      {
+                        title: "High Precision",
+                        desc: "Manufactured with advanced CNC machining and micron-level accuracy.",
+                        icon: "🎯",
+                      },
+                      {
+                        title: "Tight Tolerances",
+                        desc: "Engineered to maintain consistent dimensions and superior quality.",
+                        icon: "📏",
+                      },
+                      {
+                        title: "Premium Materials",
+                        desc: "Available in stainless steel, brass, aluminum, titanium, and alloys.",
+                        icon: "🛠️",
+                      },
+                      {
+                        title: "Surface Finishing",
+                        desc: "Smooth finishing with coating, polishing, and custom treatments.",
+                        icon: "✨",
+                      },
+                      {
+                        title: "Custom Manufacturing",
+                        desc: "Components manufactured according to drawings and OEM requirements.",
+                        icon: "⚙️",
+                      },
+                      {
+                        title: "Industrial Applications",
+                        desc: "Suitable for automotive, aerospace, medical, and engineering industries.",
+                        icon: "🏭",
+                      },
+                    ].map((feature, i) => (
                       <motion.div
                         key={i}
                         className="group bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-6 rounded-2xl transition-all duration-300 text-center"
@@ -369,15 +425,33 @@ export default function Products(): React.JSX.Element {
                         >
                           {feature.icon}
                         </motion.div>
+
                         <h5 className="font-bold text-lg mb-2 text-white group-hover:text-blue-100 transition-colors">
                           {feature.title}
                         </h5>
+
                         <p className="text-gray-300 group-hover:text-gray-200 transition-colors leading-relaxed">
                           {feature.desc}
                         </p>
                       </motion.div>
                     ))}
                   </div>
+                </div>
+
+                {/* Description */}
+                <div className="bg-gradient-to-r from-blue-900/20 to-slate-900/20 border border-blue-500/20 rounded-3xl p-8">
+                  <h3 className="text-2xl md:text-3xl font-bold mb-6 text-white">
+                    Precision Engineering Solutions
+                  </h3>
+
+                  <p className="text-gray-300 text-md md:text-lg leading-relaxed">
+                    We specialize in manufacturing high-quality micro precision
+                    machined components for industries requiring exceptional
+                    accuracy, durability, and consistency. Our advanced CNC
+                    machining processes ensure superior dimensional control,
+                    excellent surface finishing, and reliable performance across
+                    every component.
+                  </p>
                 </div>
               </motion.div>
             )}

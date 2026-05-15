@@ -58,15 +58,23 @@ export default function Home() {
       img: "/assets/pipe-product.png",
       description:
         "Precision-engineered custom casting and forging components manufactured for industrial, automotive, and hardware applications.",
-      features: ["Custom Metal Parts", "Multiple Alloys", "High Strength & Precision"],
+      features: [
+        "Custom Metal Parts",
+        "Multiple Alloys",
+        "High Strength & Precision",
+      ],
       gradient: "from-slate-800 via-slate-700 to-slate-700",
     },
     {
-      title: "Valve Casting Products",
-      img: "/assets/Valve.png",
+      title: "Micro Precision Machined Components",
+      img: "/assets/micro-machined-parts.png",
       description:
-        "High-quality valve components and castings for industrial applications with custom manufacturing.",
-      features: ["Custom Manufacturing", "Quality Assured", "Multi-Industry"],
+        "High-precision machined components manufactured with advanced CNC technology for industrial, automotive, aerospace, and engineering applications.",
+      features: [
+        "Tight Tolerance Machining",
+        "Custom CNC Manufacturing",
+        "Premium Surface Finishing",
+      ],
       gradient: "from-slate-800 via-slate-700 to-slate-700",
     },
   ];
