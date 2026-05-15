@@ -54,11 +54,11 @@ export default function Home() {
       gradient: "from-slate-800 via-slate-700 to-slate-700",
     },
     {
-      title: "Pipe Products",
+      title: "Custom Casting & Forging Products",
       img: "/assets/pipe-product.png",
       description:
-        "Comprehensive range of carbon steel pipes including OCTG, line pipe, and seamless products.",
-      features: ["OCTG & Line Pipe", "Various Grades", "MTR Available"],
+        "Precision-engineered custom casting and forging components manufactured for industrial, automotive, and hardware applications.",
+      features: ["Custom Metal Parts", "Multiple Alloys", "High Strength & Precision"],
       gradient: "from-slate-800 via-slate-700 to-slate-700",
     },
     {
@@ -195,8 +195,8 @@ export default function Home() {
                       src={product.img}
                       alt={product.title}
                       width={500}
-                      height={100}
-                      className="object-fit rounded-lg"
+                      height={200}
+                      className="object-cover max-h-52 rounded-lg"
                     />
                   </div>
                   <div className="mb:p-8 p-6">

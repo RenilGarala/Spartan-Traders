@@ -51,13 +51,9 @@ export default function Products(): React.JSX.Element {
 
       <div className="relative p-6 h-full flex flex-col">
         <div>
-          <Image
-            src={img}
-            alt={title}
-            width={500}
-            height={100}
-            className="object-fit rounded-md"
-          />
+          <div className="relative w-full h-[250px] overflow-hidden rounded-md">
+            <Image src={img} alt={title} fill className="object-cover" />
+          </div>
           <h3 className="text-xl md:text-2xl mt-4 mb-4 font-bold w-full text-white group-hover:text-blue-100 transition-colors">
             {title}
           </h3>
@@ -225,7 +221,11 @@ export default function Products(): React.JSX.Element {
 
         {/* Pipe Products Section */}
         <div className="space-y-6">
-          <SectionButton section="pipe" title="Pipe Products" icon="🔧" />
+          <SectionButton
+            section="pipe"
+            title="Custom Casting & Forging Products"
+            icon="🔧"
+          />
 
           <AnimatePresence mode="wait">
             {openSection === "pipe" && (
@@ -238,61 +238,62 @@ export default function Products(): React.JSX.Element {
                 className="bg-gradient-to-br from-slate-900/40 via-gray-800/40 to-slate-900/40 backdrop-blur-sm rounded-3xl p-6 md:p-8 border border-white/10 space-y-8"
               >
                 <p className="text-sm md:text-xl text-gray-300 leading-relaxed max-w-4xl">
-                  We distribute a complete range of carbon steel pipe products
-                  for energy, infrastructure, and industrial applications. All
-                  items are supported by proper MTRs and industry
-                  certifications.
+                  We manufacture high-quality custom casting and forging
+                  components for industrial, automotive, construction, and
+                  engineering applications. All products are produced with
+                  precision machining, strict quality control, and reliable
+                  material standards.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                   <ProductCard
-                    img="/assets/casing-tubing-production-line.jpg"
-                    title="OCTG (Oil Country Tubular Goods)"
-                    desc="High-quality oil country tubular goods for drilling and production operations."
+                    img="/assets/investment-casting.png"
+                    title="Investment Casting Components"
+                    desc="Precision investment casting solutions for industrial and engineering applications."
                     features={[
-                      "Casing and tubing solutions",
-                      "API 5CT specifications compliance",
-                      "Various grades and sizes available",
-                      "Complete MTR documentation",
+                      "High dimensional accuracy",
+                      "Smooth surface finishing",
+                      "Complex shape manufacturing",
+                      "Custom alloy options",
                     ]}
                     gradient="from-blue-900/60 via-blue-700/60 to-blue-500/60"
                   />
 
                   <ProductCard
-                    img="/assets/pipe-product.png"
-                    title="Line Pipe"
-                    desc="Carbon steel line pipe for oil and gas transmission systems."
+                    img="/assets/forged-components.png"
+                    title="Forged Industrial Components"
+                    desc="Durable forged metal parts designed for high-strength industrial applications."
                     features={[
-                      "API 5L specifications",
-                      "ERW and seamless options",
-                      "Various wall thickness",
-                      "Certified quality assurance",
+                      "Hot and cold forging",
+                      "Superior mechanical strength",
+                      "Custom forged shapes",
+                      "Strict quality inspection",
                     ]}
                     gradient="from-purple-900/60 via-purple-700/60 to-purple-500/60"
                   />
 
                   <ProductCard
-                    img="/assets/piling.jpeg"
-                    title="Piling / Hollow Section / Surplus"
-                    desc="Structural steel piling and hollow sections for construction projects."
+                    img="/assets/sand-casting.png"
+                    title="Sand Casting Products"
+                    desc="Custom sand casting products for automotive, machinery, and construction industries."
                     features={[
-                      "ASTM A252 and A500 standards",
-                      "Various diameter options",
-                      "Custom length cutting",
-                      "Structural applications",
+                      "Large and complex parts",
+                      "Cost-effective production",
+                      "Various metal grades",
+                      "Reliable structural integrity",
                     ]}
                     gradient="from-green-900/60 via-green-700/60 to-green-500/60"
                   />
 
                   <ProductCard
-                    img="/assets/pipe-line.jpg"
-                    title="Seamless Line Pipe"
-                    desc="Premium seamless steel pipe for high-pressure applications."
+                    img="/assets/cnc-machined-parts.png"
+                    title="CNC Machined & Finished Parts"
+                    desc="Precision-machined casting and forging components with premium finishing quality."
                     features={[
-                      "High-pressure rated",
-                      "Superior corrosion resistance",
-                      "Precision manufacturing",
-                      "Quality certified materials",
+                      "High precision machining",
+                      "Custom surface treatments",
+                      "Tight tolerance control",
+                      "Ready-to-assemble parts",
                     ]}
                     gradient="from-orange-900/60 via-orange-700/60 to-orange-500/60"
                   />
@@ -335,7 +336,7 @@ export default function Products(): React.JSX.Element {
                           alt={product.title}
                           width={600}
                           height={600}
-                          className="object-fit w-full h-full"
+                          className="object-cover w-full h-full"
                         />
                       </div>
                       <div className="p-6">

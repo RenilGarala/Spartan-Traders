@@ -3,8 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import { Header } from "@/components/Navbar";
-import { ReactLenis } from "@/utils/lenis";
-import { Toaster } from "sonner";
+import ClientProviders from "@/components/ClientProviders";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,16 +27,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ReactLenis root>
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
-        >
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
+      >
+        <ClientProviders>
           <Header />
-          <Toaster position="top-center" />
           {children}
           <Footer />
-        </body>
-      </ReactLenis>
+        </ClientProviders>
+      </body>
     </html>
   );
 }
